@@ -10,15 +10,19 @@ public class CreationCustomerRequest {
 
     private LocalDate birthDate;
 
-    private String birthCity;
-
-    private String birthUf;
+    private String cityOfBirth;
 
     private String cep;
 
-    private String numberOfDistrict;
+    private String district;
+
+    private String number;
 
     private String complement;
+
+    private String city;
+
+    private String uf;
 
     public String getCpfCustomer() {
         return cpfCustomer;
@@ -44,20 +48,12 @@ public class CreationCustomerRequest {
         this.birthDate = birthDate;
     }
 
-    public String getBirthCity() {
-        return birthCity;
+    public String getCityOfBirth() {
+        return cityOfBirth;
     }
 
-    public void setBirthCity(String birthCity) {
-        this.birthCity = birthCity;
-    }
-
-    public String getBirthUf() {
-        return birthUf;
-    }
-
-    public void setBirthUf(String birthUf) {
-        this.birthUf = birthUf;
+    public void setCityOfBirth(String cityOfBirth) {
+        this.cityOfBirth = cityOfBirth;
     }
 
     public String getCep() {
@@ -68,12 +64,20 @@ public class CreationCustomerRequest {
         this.cep = cep;
     }
 
-    public String getNumberOfDistrict() {
-        return numberOfDistrict;
+    public String getDistrict() {
+        return district;
     }
 
-    public void setNumberOfDistrict(String numberOfDistrict) {
-        this.numberOfDistrict = numberOfDistrict;
+    public void setDistrict(String district) {
+        this.district = district;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
     }
 
     public String getComplement() {
@@ -82,5 +86,21 @@ public class CreationCustomerRequest {
 
     public void setComplement(String complement) {
         this.complement = complement;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getUf() {
+        return uf;
+    }
+
+    public void setUf(String uf) {
+        this.uf = uf;
     }
 }

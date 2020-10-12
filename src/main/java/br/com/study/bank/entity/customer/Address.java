@@ -1,5 +1,8 @@
 package br.com.study.bank.entity.customer;
 
+import javax.persistence.Table;
+
+@Table(name = "address")
 public class Address {
 
     private String addressId;

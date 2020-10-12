@@ -1,14 +1,30 @@
 package br.com.study.bank.entity.customer;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
+@Table(name = "customer")
 public class Customer {
 
+    @Id
+    @Column(name = "customer_uid")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long customerUid;
+    
+    @Column(name = "cpf_customer")
     private String cpfCustomer;
+
+    @Column(name = "customer_name")
     private String customerName;
+
+    @Column(name = "birth_date")
     private LocalDate birthDate;
+
+    @Column(name = "city_of_birth")
     private String cityOfBirth;
+
+    @JoinColumn(name = "address_id", referencedColumnName = "address_uid")
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Address address;
 
     public Long getCustomerUid() {
